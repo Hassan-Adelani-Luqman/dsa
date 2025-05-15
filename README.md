@@ -154,7 +154,7 @@ Select `2` for subtraction.
 
 ## 📚 References & Credits
 
-* Developed as part of "Data Structures and Algorithms for Engineers" course.
+* Developed as part of "Enterprice Web development" course.
 * Matrix format provided by course instructors.
 * JavaScript runtime: Node.js v22+
 
