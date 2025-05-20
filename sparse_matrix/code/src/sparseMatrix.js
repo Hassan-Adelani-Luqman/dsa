@@ -48,6 +48,19 @@ class SparseMatrix {
     this.data[row][col] = value;
   }
 
+  saveToFile(filePath) {
+  const lines = [];
+  lines.push(`rows=${this.rows}`);
+  lines.push(`cols=${this.cols}`);
+  for (const r in this.data) {
+    for (const c in this.data[r]) {
+      lines.push(`(${r}, ${c}, ${this.data[r][c]})`);
+    }
+  }
+  fs.writeFileSync(filePath, lines.join('\n'), 'utf-8');
+}
+
+
   add(other) {
     if (this.rows !== other.rows || this.cols !== other.cols) {
       throw new Error("Matrix size mismatch for addition");
